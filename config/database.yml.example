@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: 
+  password: 
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: marketories_development
+
+test:
+  <<: *default
+  database: marketories_test
+
+production:
+  <<: *default
+  database: marketories_production
+  username:
+  password:
