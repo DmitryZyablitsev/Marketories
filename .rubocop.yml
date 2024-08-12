@@ -170,6 +170,9 @@ RSpec/NestedGroups:
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
 
+RSpec/MultipleExpectations:
+  Enabled: false
+
 Performance/CollectionLiteralInLoop:
   Exclude:
     - 'Rakefile'

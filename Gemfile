@@ -48,6 +48,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails', '~> 6.4'
+  gem 'ffaker', '~> 2.23'
   gem 'rspec-rails', '~> 6.1.0'
 end
 
@@ -68,6 +69,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'rails-controller-testing', '~>1.0'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 6.3'
 end
