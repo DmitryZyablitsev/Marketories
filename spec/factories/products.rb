@@ -12,5 +12,10 @@ FactoryBot.define do
       specification { 'Specification-Shirt' }
       price { 780 }
     end
+
+    trait :invalid do
+      title { '' }
+      description { '' }
+    end
   end
 end

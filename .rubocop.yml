@@ -173,6 +173,9 @@ RSpec/MultipleMemoizedHelpers:
 RSpec/MultipleExpectations:
   Enabled: false
 
+RSpec/ExampleLength:
+  Max: 10
+
 Performance/CollectionLiteralInLoop:
   Exclude:
     - 'Rakefile'
