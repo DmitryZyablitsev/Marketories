@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 feature 'Unregistered user can register' do
+  given(:user) { create(:user) }
+
   background do
     visit root_path
     click_on 'Register'
@@ -19,22 +21,24 @@ feature 'Unregistered user can register' do
 
     scenario 'User made mistakes during registration' do
       fill_in 'Email', with: ''
-      fill_in 'Password', with: '11111111'
-      fill_in '', with: '22222222'
+      fill_in 'Password', with: '12345678'
+      fill_in 'Password confirmation', with: '123456788'
+      click_on 'Sign up'
 
-      expect(page).to have_content '2 error(s) detected:'
-      expect(page).to have_content 'The email cannot be empty'
-      expect(page).to have_content "passwords don't match"
+      expect(page).to have_content '2 errors prohibited this user from being saved:'
+      expect(page).to have_content "Email can't be blank"
+      expect(page).to have_content "Password confirmation doesn't match Password"
     end
   end
 
   scenario "User's email exists in the database" do
-    given!(:user) { create(:user) }
-
+    user
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
-    fill_in '', with: user.password
+    fill_in 'Password confirmation', with: user.password
 
-    expect(page).to have_content 'This user exists in the system'
+    click_on 'Sign up'
+
+    expect(page).to have_content 'Email has already been taken'
   end
 end

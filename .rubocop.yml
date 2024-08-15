@@ -16,6 +16,8 @@ AllCops:
     - '.git/**/*'
     - 'bin/*'
     - 'db/schema.rb'
+    - 'db/migrate/20240815052423_add_devise_to_users.rb'
+    - 'config/initializers/devise.rb'
 
   TargetRubyVersion: 2.7
   SuggestExtensions: false
