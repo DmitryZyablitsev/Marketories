@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    @product.user = User.first || User.create!(email: 'user@dev.com')
+    @product.user = User.first || User.create!(email: 'user@dev.com', password: '12345678')
 
     if @product.save
       redirect_to @product, notice: 'Your product successfully created.'

@@ -31,7 +31,7 @@ feature 'Unregistered user can register' do
     end
   end
 
-  scenario "User's email exists in the database" do
+  scenario "User has not confirmed the email" do
     user
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password

@@ -66,6 +66,7 @@ group :development do
   gem 'rubocop', '~> 1.65', require: false
   gem 'rubocop-performance', '~> 1.21', require: false
   gem 'rubocop-rspec', '~> 3.0', require: false
+  gem "letter_opener", '~> 1.10'
 end
 
 group :test do
