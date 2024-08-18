@@ -1,6 +1,6 @@
 User.destroy_all
 
-user = User.create!(email: 'user@develop.com')
+user = User.create!(email: 'user@develop.com', password: '12345678')
 
 5.times do
   user.products.create!(
