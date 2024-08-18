@@ -100,6 +100,7 @@ Metrics/BlockLength:
     - 'Rakefile'
     - '**/*.rake'
     - 'spec/**/*.rb'
+    - 'config/environments/*.rb'
 
 Metrics/ClassLength:
   Exclude:

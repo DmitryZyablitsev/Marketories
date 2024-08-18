@@ -16,7 +16,7 @@ feature 'Unregistered user can register' do
 
       click_on 'Sign up'
 
-      expect(page).to have_content 'Welcome! You have signed up successfully.'
+      expect(page).to have_content 'A message with a confirmation link has been sent to your email address.'
     end
 
     scenario 'User made mistakes during registration' do
@@ -31,7 +31,7 @@ feature 'Unregistered user can register' do
     end
   end
 
-  scenario "User has not confirmed the email" do
+  scenario "The user's email exists in the database" do
     user
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
