@@ -17,7 +17,7 @@ feature 'User can sign in', "
     fill_in 'Password', with: user.password
     click_on 'Log in'
 
-    expect(page).to have_content 'You have to confirm your email address before continuing'
+    expect(page).to have_content 'Signed in successfully.'
   end
 
   scenario 'Unregistered user tries to sign in' do
