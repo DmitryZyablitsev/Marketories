@@ -1,0 +1,38 @@
+ru:
+  helpers:
+    submit:
+      product:
+        create: "Сохранить"
+        update: "Сохранить"
+    label:
+      product:
+        title: "Название"
+        description: 'Описание'
+        specification: 'Характеристики'
+        price: 'Цена'
+
+  shared:
+    nav:
+      registration: "Регистрация"
+      sign_in: "Войти"
+      marketories: "Marketories"
+
+  products:
+    create:
+      success: 'Ваш товар успешно создан.'
+    update:
+      success: 'Ваш товар успешно отредактирован.'
+    destroy:
+      success: 'Ваш товар был удален.'
+    show:
+      back: 'Назад'
+      edit: "Редактировать"
+      delete: "Удалить"
+    new:
+      back: 'Назад'
+      head: 'Новый товар'
+    edit:
+      head: 'Редактировать товар'
+    index:
+      products: "Товары"
+      add_product: "Добавить товар"

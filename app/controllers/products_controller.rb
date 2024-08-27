@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
     @product.user = User.first || User.create!(email: 'user@dev.com', password: '12345678')
 
     if @product.save
-      redirect_to @product, notice: 'Your product successfully created.'
+      redirect_to @product, notice: t('.success')
     else
       render :new
     end
@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to @product, notice: 'Your product successfully edited.'
+      redirect_to @product, notice: t('.success')
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to products_path, notice: 'Your product has been deleted.'
+    redirect_to products_path, notice: t('.success')
   end
 
   private
