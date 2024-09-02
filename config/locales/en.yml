@@ -28,4 +28,44 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      product:
+        create: "Save"
+        update: "Save"
+    label:
+      product:
+        title: "Title"
+        description: 'Description'
+        specification: 'Specification'
+        price: 'Price'
+
+
+  shared:
+    nav:
+      registration: "Registration"
+      sign_in: "Sign in"
+      marketories: "Marketories"
+      log_out: "Log out"
+    flash:
+      not_authorized: "You do not have access to this resource"
+
+  products:
+    create:
+      success: 'Your product successfully created.'
+    update:
+      success: 'Your product successfully edited.'
+    destroy:
+      success: 'Your product has been deleted.'
+    show:
+      back: 'Back'
+      edit: "Edit"
+      delete: "Delete"
+    new:
+      back: 'Back'
+      head: 'New Product'
+    edit:
+      head: 'Edit product'
+    index:
+      products: "Products"
+      add_product: "Add a product"

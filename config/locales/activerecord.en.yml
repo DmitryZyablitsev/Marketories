@@ -1,0 +1,17 @@
+en:
+  activerecord:
+    models:
+      product: "Product"
+
+    attributes:
+      product:
+        title: "Title"
+        description: 'Description'
+        specification: 'Specification'
+        price: 'Price'
+        user: 'User'
+
+    errors:
+      messages:
+        blank: "can't be blank"
+        required: 'must exist'

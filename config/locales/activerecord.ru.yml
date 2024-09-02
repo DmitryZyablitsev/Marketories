@@ -1,0 +1,17 @@
+ru:
+  activerecord:
+    models:
+      product: "Товар"
+
+    attributes:
+      product:
+        title: "Название"
+        description: 'Описание'
+        specification: 'Характеристики'
+        price: 'Цена'
+        user: 'Пользователь'
+
+    errors:
+      messages:
+        blank: 'не может быть пустым'
+        required: 'должен существовать'

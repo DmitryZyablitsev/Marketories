@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, except: %i[index show]
   before_action :load_product, only: %i[show edit update destroy]
+  before_action :authorize_product!
+  after_action :verify_authorized
 
   def index
     @products = Product.all
@@ -12,11 +15,10 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(product_params)
-    @product.user = User.first || User.create!(email: 'user@dev.com', password: '12345678')
+    @product = current_user.products.new(product_params)
 
     if @product.save
-      redirect_to @product, notice: 'Your product successfully created.'
+      redirect_to @product, notice: t('.success')
     else
       render :new
     end
@@ -26,7 +28,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to @product, notice: 'Your product successfully edited.'
+      redirect_to @product, notice: t('.success')
     else
       render :edit
     end
@@ -34,7 +36,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to products_path, notice: 'Your product has been deleted.'
+    redirect_to products_path, notice: t('.success')
   end
 
   private
@@ -45,5 +47,9 @@ class ProductsController < ApplicationController
 
   def load_product
     @product = Product.find(params[:id])
+  end
+
+  def authorize_product!
+    authorize(@product || Product)
   end
 end
