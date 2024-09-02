@@ -46,6 +46,9 @@ en:
       registration: "Registration"
       sign_in: "Sign in"
       marketories: "Marketories"
+      log_out: "Log out"
+    flash:
+      not_authorized: "You do not have access to this resource"
 
   products:
     create:

@@ -16,6 +16,9 @@ ru:
       registration: "Регистрация"
       sign_in: "Войти"
       marketories: "Marketories"
+      log_out: "Выйти"
+    flash:
+      not_authorized: "Вы не имеете доступ к этому ресурсу"
 
   products:
     create:
