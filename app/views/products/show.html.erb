@@ -5,6 +5,12 @@
   <p>  <%= t("helpers.label.product.price") %>: <%= @product.price %> </p>
   <p> <%= t("helpers.label.product.specification") %>: <%= @product.specification %> </p>
   <p> <%= t("helpers.label.product.description") %>: <%= @product.description %> </p>
-  <p> <%=link_to t('.edit'), edit_product_path(@product) %> </p>
-  <p> <%=button_to t('.delete'), product_path(@product), method: :delete %> </p>
+
+  <% if policy(@product).edit? %>
+    <p> <%=link_to t('.edit'), edit_product_path(@product) %> </p>
+  <% end %>
+  
+  <% if policy(@product).destroy? %>
+    <p> <%=button_to t('.delete'), product_path(@product), method: :delete %> </p>
+  <% end %>
 </div>
