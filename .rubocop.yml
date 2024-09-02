@@ -170,6 +170,15 @@ RSpec/MessageSpies:
 RSpec/NestedGroups:
   Max: 7
 
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/ContextWording:
+ Enabled: false
+
+RSpec/PredicateMatcher:
+  Enabled: false
+
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
 

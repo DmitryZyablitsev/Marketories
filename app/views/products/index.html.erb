@@ -1,6 +1,7 @@
 <h1><%= t(".products") %></h1>
-
-<p> <%= link_to t(".add_product"), new_product_path  %>
+ <% if policy(:product).new?  %>
+  <p> <%= link_to t(".add_product"), new_product_path  %>
+ <% end %>
 
 <div class="products-list">
   <% @products.each do |product| %>
