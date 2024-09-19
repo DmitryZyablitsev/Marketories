@@ -3,6 +3,10 @@ class GuestUser
     true
   end
 
+  def cart
+    nil
+  end
+
   def author?(_)
     false
   end

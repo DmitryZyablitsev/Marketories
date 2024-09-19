@@ -5,3 +5,8 @@
   <%= link_to t(".registration"), new_user_registration_path %>
   <%= link_to t(".sign_in"), new_user_session_path %>
 <% end %>
+
+<%= link_to t(".cart"), cart_path %>
+<%= session[:user_id] %>
+
+

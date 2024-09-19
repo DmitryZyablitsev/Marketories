@@ -1,7 +1,7 @@
 class CartItemPolicy < ApplicationPolicy
 
   def create?
-    user.cart == @record.cart || user.admin_role?
+    !user.guest?
   end
 
   def update?

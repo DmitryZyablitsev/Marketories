@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to @product, notice: t('.success')
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

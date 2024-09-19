@@ -5,7 +5,6 @@
 
 <div class="products-list">
   <% @products.each do |product| %>
-    <p> <%= link_to product.title, product  %>, <%= product.price %>
-    <br>
+    <p> <%= link_to product.title, product  %>, <%= product.price %></p>
   <% end %>
 </div>

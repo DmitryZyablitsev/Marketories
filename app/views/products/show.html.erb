@@ -5,6 +5,7 @@
   <p>  <%= t("helpers.label.product.price") %>: <%= @product.price %> </p>
   <p> <%= t("helpers.label.product.specification") %>: <%= @product.specification %> </p>
   <p> <%= t("helpers.label.product.description") %>: <%= @product.description %> </p>
+  <p> <%=button_to t('.in_cart'), cart_items_path, method: :post, params: { cart_item: { product_id: @product.id } }, data: { type: :json }  %> </p>
 
   <% if policy(@product).edit? %>
     <p> <%=link_to t('.edit'), edit_product_path(@product) %> </p>
