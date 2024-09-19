@@ -1,8 +1,17 @@
+<p> <%=link_to t('.back'), products_path %> </p>
+
 <div>
   <h2> <%= @product.title %> <h2>
-  <p> Price: <%= @product.price %> </p>
-  <p> Specification: <%= @product.specification %> </p>
-  <p> Description: <%= @product.description %> </p>
-  <p> <%=link_to 'Edit', edit_product_path(@product) %> </p>
-  <p> <%=button_to 'Delete', product_path(@product), method: :delete %> </p>
+  <p>  <%= t("helpers.label.product.price") %>: <%= @product.price %> </p>
+  <p> <%= t("helpers.label.product.specification") %>: <%= @product.specification %> </p>
+  <p> <%= t("helpers.label.product.description") %>: <%= @product.description %> </p>
+  <p> <%=button_to t('.in_cart'), cart_items_path, method: :post, params: { cart_item: { product_id: @product.id } }, data: { type: :json }  %> </p>
+
+  <% if policy(@product).edit? %>
+    <p> <%=link_to t('.edit'), edit_product_path(@product) %> </p>
+  <% end %>
+  
+  <% if policy(@product).destroy? %>
+    <p> <%=button_to t('.delete'), product_path(@product), method: :delete %> </p>
+  <% end %>
 </div>

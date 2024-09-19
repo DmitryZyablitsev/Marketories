@@ -5,7 +5,7 @@ feature 'Unregistered user can register' do
 
   background do
     visit root_path
-    click_on 'Register'
+    click_on 'Registration'
   end
 
   describe "User's email does not exist in the database" do

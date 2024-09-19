@@ -1,0 +1,29 @@
+ru:
+  activerecord:
+    models:
+      product: "Товар"
+
+    attributes:
+      product:
+        title: "Название"
+        description: 'Описание'
+        specification: 'Характеристики'
+        price: 'Цена'
+        user: 'Пользователь'
+
+      cart_item:
+        cart_id: "Корзина"
+
+    errors:
+      messages:
+        blank: 'не может быть пустым'
+        required: 'должен существовать'
+
+      models:
+        cart_item:
+          attributes:
+            cart_id:
+              taken: 'nj'
+        # error_product_in_the_cart: "Товар уже в корзине"
+# ru.activerecord.errors.models.cart_item.attributes.cart_id.taken
+# ru.activerecord.errors.models.cart_item.attributes.cart_id.taken 
